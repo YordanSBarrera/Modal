@@ -1,15 +1,19 @@
 import './App.css';
-import openModal from './components/openModal';
+import {openModalAccount,openModalSetting} from './components/openModal';
 
 function App() {
-function handleOpenModal(){
-  openModal();
+function handleOpenModalAccont(){
+  openModalAccount();
+}
+function handleOpenModalSetting(){
+  openModalSetting();
 }
 
   return (
     <div className="App">
      <h1>Modal</h1>
-     <button onClick={handleOpenModal} >Abrir Modal</button>
+     <button onClick={handleOpenModalAccont} >Abrir Modalde Cuenta</button>
+     <button onClick={handleOpenModalSetting} >Abrir Modal de Configuraciones</button>
     </div>
   );
 }

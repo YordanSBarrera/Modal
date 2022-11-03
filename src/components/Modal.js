@@ -4,9 +4,10 @@ import style from "./modal.module.scss";
 export default function Modal({ children, title, root }) {
   const ref = useRef(null);
   function callback(e) {
-    root.unmount();
-    document.querySelector("#modal").remove();
     ref.current.removeEventListener("animationend", callback);
+    root.unmount();
+
+    document.querySelector("#modal").remove();
   }
 
   function handleClick() {
